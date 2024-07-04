@@ -18,16 +18,18 @@ public class principal {
                 4) Real Brasileño -> Dólar
                 5) Peso Colombiano -> Dólar
                 6) Dólar -> Peso Colombiano 
-                7) Salir
+                7) Peso boliviano -> Dólar
+                8) Dólar -> Peso boliviano
+                9) Salir
                 ************************************************************************
                 """);
 
             int opcion = teclado.nextInt();
 
-            if (opcion == 7) {
+            if (opcion == 9) {
                 continuar = false;
                 System.out.println("Gracias por usar el conversor de monedas de Ric.");
-            } else if (opcion < 1 || opcion > 7) {
+            } else if (opcion < 1 || opcion > 9) {
                 System.out.println("Opción no válida.");
             } else {
                 System.out.print("Ingrese la cantidad que desea covertir: ");
@@ -60,6 +62,14 @@ public class principal {
                     case 6:
                         fromCurrency = "USD";
                         toCurrency = "COP";
+                        break;
+                    case 7:
+                        fromCurrency = "BOB";
+                        toCurrency = "USD";
+                        break;
+                    case 8:
+                        fromCurrency = "USD";
+                        toCurrency = "BOB";
                         break;
                 }
 
